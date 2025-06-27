@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certifica-T</title>
+  <link rel="icon" type="image/jpg" href="logo.jpg">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+
+  <div class="form-box">
+    <h1>Bienvenido al sistema de certificados Certifica-T</h1>
+    <h2>Consulta tus Certificados</h2>
+    <form onsubmit="consultar(); return false;">
+      <label for="tipo">Tipo de documento</label>
+      <select id="tipo">
+        <option value="CC">Cédula de Ciudadanía</option>
+        <option value="TI">Tarjeta de Identidad</option>
+        <option value="CE">Cédula de Extranjeria</option>
+      </select><br>
+      
+      <label for="documento">Número de documento</label>
+      <input type="text" id="documento" placeholder="Ingresa tu número"><br>
+      
+      <button type="submit">Buscar Certificados</button>
+    </form>
+    
+    <div id="loading" class="loading-container" style="display: none;">
+      <div class="spinner"></div>
+      <p>Buscando certificados...</p>
+    </div>
+    
+    <div id="resultado">
+      <!-- Aquí se insertará la tabla dinámicamente -->
+    </div>
+  </div>
+
+</body>
+</html>
