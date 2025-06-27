@@ -28,7 +28,7 @@ async function consultar() {
   loading.style.display = "block";
 
   try {
-    const url = 'https://script.google.com/macros/s/AKfycbyoOliHEVP1uicholthORqLH4OC7aw86s-d1qWZNuvApvT-6ZuGtQke2XHnDR8_dkE-ZQ/exec';
+    const url = 'https://script.google.com/macros/s/AKfycbxEEs_ks9yYU57JztI14QE6N-6otKIhwIHEtUpLKyRFPe-j9bjhELkFG51tAqlhpDgcJA/exec';
     const response = await fetch(`${url}?tipo=${tipos.join(',')}&documento=${documentos.join(',')}`);
     const data = await response.json();
     loading.style.display = "none";
